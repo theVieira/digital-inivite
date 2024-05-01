@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Anaheim&family=Gwendolyn:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --primary-color: #1A1A1A;
+  --secondary-color: #323232;
+  --light-color: #606060;
+}
+
+body {
+  font-size: 1.6rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.backgrounds {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -10;
+}
+
+.flower {
+  width: 40rem;
+}
+
+#flower-ln {
+  position: absolute;
+  top: -10%;
+  left: -7%;
+  animation: page-load 1.5s both .5s;
+}
+
+#flower-rn {
+  position: absolute;
+  top: -24%;
+  right: -6%;
+  transform: rotate(160deg);
+  animation: page-load 1.5s both .7s;
+}
+
+#flower-rs {
+  position: absolute;
+  bottom: -15%;
+  right: -5%;
+  transform: rotate(60deg);
+  animation: page-load 1.5s both .6s;
+}
+
+#flower-ls {
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  transform: rotate(80deg);
+  animation: page-load 1.5s both .9s;
+}
+
+main {
+  height: 100vh;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5rem 0;
+  animation: page-load 1.5s both .5s;
+}
+
+.logo {
+  animation: page-load 1.5s both .6s;
+}
+
+.text {
+  font-family: 'Anaheim';
+  color: var(--light-color);
+  text-align: center;
+  font-size: 3rem;
+}
+
+.name {
+  font-family: 'Gwendolyn';
+  color: var(--secondary-color);
+  font-size: 7rem;
+}
+
+.emphasis .text {
+  font-size: 2.5rem;
+  margin-top: .5rem;
+}
+
+hr {
+  width: 50%;
+  border: 1px solid #606060;
+}
+
+@media (max-width: 1024px) {
+  .flower {
+    width: 30rem;
+  }
+
+  #flower-rn {
+    top: -20%;
+    right: -10%;
+  }
+
+  #flower-rs {
+    bottom: -10%;
+  }
+}
+
+@media (max-width: 800px) {
+  .flower {
+    opacity: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .flower {
+    width: 25rem;
+  }
+
+  #flower-rs {
+    bottom: -10%;
+    right: -10%;
+  }
+
+  .text {
+    font-size: 2rem;
+  }
+
+  .emphasis .text {
+    font-size: 1.5rem;
+  }
+
+  .name {
+    font-size: 5rem;
+  }
+
+  .logo {
+    width: 15rem;
+  }
+}
+
+@keyframes page-load {
+  from {
+    opacity: 0%;
+  } to {
+    opacity: 100%;
+  }
+}
